@@ -117,6 +117,63 @@ body {
 }
 
 
+/*FEATURES COLLAPSE*/
+
+* collapse */ .module {
+    padding: 0 !important;
+    border-radius: 4px 4px 4px 4px;
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+.caption {
+    cursor: pointer;
+    transition: .2s ease color;
+    border-radius: 4px 4px 0 0;
+    padding: 10px 20px;
+    background-color: rgb(231, 228, 228);
+    box-shadow: -0px .75rem 1rem rgba(0, 0, 0, .2);
+}
+
+.caption h2 {
+    font-size: 18px;
+    line-height: 2;
+    margin-bottom: 0;
+}
+
+.caption:hover {
+    color: rgb(0, 183, 255);
+}
+
+.body {
+    padding: 16px 12px;
+    text-align: justify;
+    line-height: 1.6;
+    background-color: whitesmoke;
+    border-radius: 0 0 4px 4px;
+    box-shadow: 0 .75rem 1rem rgba(0, 0, 0, .2);
+    display: none;
+}
+
+.icon-roll {
+    font-weight: 900;
+    font-size: 28px;
+    line-height: 1.1;
+}
+
+.rotate {
+    transform: rotate(135deg);
+    transition: .5s cubic-bezier(.17, .67, .21, 1.69);
+    ;
+}
+
+.rev-rotate {
+    transform: rotate(0deg);
+    transition: .7s cubic-bezier(.17, .67, .21, 1.69);
+    ;
+}
+
+
 /*FEATURES CONTACT*/
 
 * {
