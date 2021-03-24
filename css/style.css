@@ -130,10 +130,10 @@ body {
 .container-contact {
     top: 50%;
     width: 100%;
-    padding: 3px 20px;
+    padding: 20px 20px;
     background: url('https://wallpaperaccess.com/full/186244.jpg') no-repeat top center;
     background-size: cover;
-    height: 60vh;
+    height: 75vh;
 }
 
 .contact-fome {
@@ -169,7 +169,7 @@ body {
 }
 
 .msg textarea {
-    height: 200px;
+    height: 190px;
 }
 
 ::-webkit-input-placeholder {
