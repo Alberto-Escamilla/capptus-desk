@@ -3,7 +3,7 @@ window.onscroll = () => {
     if (this.scrollY <= 10) nav.className = '';
     else nav.className = 'scroll';
 };
-
+/*SLIDER BRAND*/
 $(document).ready(function() {
     $('.customer-logos').slick({
         slidesToShow: 4,
@@ -25,4 +25,19 @@ $(document).ready(function() {
             }
         }]
     });
+});
+/*COLLAPSE INFO*/
+$(".caption").click(function() {
+
+    var $body = $(this).closest(".module").find(".body");
+    var $icon = $body.siblings('.caption').find('.icon-roll');
+
+    $body.slideToggle(200);
+
+    if ($body.css("display") === 'block' && !($icon.hasClass("rotate"))) {
+        $icon.removeClass('rev-rotate').addClass('rotate').addClass('text-info').removeClass('text-dark');
+    } else {
+        $icon.removeClass('rotate').addClass('rev-rotate').addClass('text-success').removeClass('text-danger');
+    }
+
 });
