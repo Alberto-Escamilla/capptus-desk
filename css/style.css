@@ -213,6 +213,14 @@ button:hover {
 }
 
 
+/*FEATURES RECAPTCHA*/
+
+.g-recaptcha {
+    transform-origin: left top;
+    -webkit-transform-origin: left top;
+}
+
+
 /*FEATURES PARTNERS*/
 
 
