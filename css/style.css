@@ -58,6 +58,12 @@ header .overlay {
 
 /*NAVBAR CSS*/
 
+.header .navbar {
+    background: rgb(0, 111, 143);
+    background: linear-gradient(90deg, rgba(0, 111, 143, 1) 17%, rgba(0, 58, 88, 1) 100%);
+    position: fixed;
+}
+
 nav {
     position: fixed;
     z-index: 9999;
