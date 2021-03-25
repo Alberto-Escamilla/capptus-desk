@@ -1,594 +1,551 @@
-/*IMPORT GOOGLE FONTS API*/
-
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@500&display=swap');
-
-/*HEADER PROPERTIES*/
-
-header {
-    position: relative;
-    background-color: black;
-    height: 75vh;
-    min-height: 25rem;
-    width: 100%;
-    overflow: hidden;
-    font-family: 'Noto Sans SC', sans-serif;
-}
-
-header video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: 0;
-    -ms-transform: translateX(-50%) translateY(-50%);
-    -moz-transform: translateX(-50%) translateY(-50%);
-    -webkit-transform: translateX(-50%) translateY(-50%);
-    transform: translateX(-50%) translateY(-50%);
-}
-
-header .container {
-    position: relative;
-    z-index: 2;
-}
-
-header .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background-color: black;
-    opacity: 0.5;
-    z-index: 1;
-}
-
-@media (pointer: coarse) and (hover: none) {
+    /*IMPORT GOOGLE FONTS API*/
+    
+    @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@500&display=swap');
+    /*HEADER PROPERTIES*/
+    
     header {
-        background: url('https://www.extendo.company/wp-content/uploads/2020/04/extendo-blog-inteligencia-artificial.jpg') black no-repeat center center scroll;
+        position: relative;
+        background-color: black;
+        height: 75vh;
+        min-height: 25rem;
+        width: 100%;
+        overflow: hidden;
+        font-family: 'Noto Sans SC', sans-serif;
     }
+    
     header video {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        z-index: 0;
+        -ms-transform: translateX(-50%) translateY(-50%);
+        -moz-transform: translateX(-50%) translateY(-50%);
+        -webkit-transform: translateX(-50%) translateY(-50%);
+        transform: translateX(-50%) translateY(-50%);
+    }
+    
+    header .container {
+        position: relative;
+        z-index: 2;
+    }
+    
+    header .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: black;
+        opacity: 0.5;
+        z-index: 1;
+    }
+    
+    @media (pointer: coarse) and (hover: none) {
+        header {
+            background: url('https://www.extendo.company/wp-content/uploads/2020/04/extendo-blog-inteligencia-artificial.jpg') black no-repeat center center scroll;
+        }
+        header video {
+            display: none;
+        }
+    }
+    /*NAVBAR CSS*/
+    
+    .navbar-default {
+        transition: 500ms ease;
+        background: transparent;
+    }
+    
+    .navbar-default.scrolled {
+        background: rgba(0, 87, 122, 0.37);
+        z-index: 9999;
+        position: fixed;
+        color: thistle;
+        width: 100%;
+    }
+    
+    .navbar-custom {
+        background: rgb(0, 111, 143);
+    }
+    
+    .navbar-nav {
+        float: left;
+        margin: 0;
+        left: 50%;
+        transform: translatex(-50%);
+        position: relative;
+    }
+    /*FEATURES BODY*/
+    
+    body {
+        background: #F9F9F9;
+    }
+    
+    .elements {
+        padding-top: 15px;
+    }
+    
+    .img-capptus {
+        width: 220px;
+    }
+    
+    .font-design {
+        font-family: 'Roboto Slab', serif;
+    }
+    /*FEATURES COLLAPSE*/
+    
+    * collapse */ .module {
+        padding: 0 !important;
+        border-radius: 4px 4px 4px 4px;
+        margin-left: 4px;
+        margin-right: 4px;
+    }
+    
+    .caption {
+        cursor: pointer;
+        transition: .2s ease color;
+        border-radius: 4px 4px 0 0;
+        padding: 10px 20px;
+        background-color: rgb(231, 228, 228);
+        border-color: rgb(0, 104, 202);
+    }
+    
+    .caption h2 {
+        font-size: 18px;
+        line-height: 2;
+        margin-bottom: 0;
+    }
+    
+    .caption:hover {
+        color: rgb(0, 183, 255);
+    }
+    
+    .body {
+        padding: 16px 12px;
+        line-height: 1.4;
+        font-family: 'Noto Sans SC', sans-serif;
+        color: rgb(167, 166, 166);
+        background-color: whitesmoke;
+        border-radius: 0 0 4px 4px;
+        box-shadow: 0 .75rem 1rem rgba(0, 0, 0, .2);
         display: none;
     }
-}
-
-
-/*NAVBAR CSS*/
-
-.header .navbar {
-    background: rgb(0, 111, 143);
-    background: linear-gradient(90deg, rgba(0, 111, 143, 1) 17%, rgba(0, 58, 88, 1) 100%);
-    position: fixed;
-}
-
-nav {
-    position: fixed;
-    z-index: 9999;
-    top: 0;
-    left: 0;
-    height: 3em;
-    width: 100%;
-    background: rgb(0, 111, 143);
-    box-sizing: border-box;
-    padding: 12px 18px;
-    transition: background-color 0.4s ease-out;
-}
-
-nav span {
-    font-weight: 600;
-    letter-spacing: .085em;
-}
-
-nav button {
-    position: absolute;
-    top: 0;
-    transform: translateY(50%);
-    right: 0;
-    min-height: 1.5em;
-    min-width: 80px;
-    background-color: #eee;
-    color: #222;
-    border: 0px;
-    border-radius: 2px;
-    margin-right: 18px;
-    text-transform: uppercase;
-}
-
-nav.scroll {
-    background-color: #fcfcfc00;
-    color: #eef;
-    position: fixed;
-}
-
-
-/*FEATURES BODY*/
-
-body {
-    background: #F9F9F9;
-}
-
-.elements {
-    padding-top: 15px;
-}
-
-.img-capptus {
-    width: 220px;
-}
-
-.font-design {
-    font-family: 'Roboto Slab', serif;
-}
-
-
-/*FEATURES COLLAPSE*/
-
-* collapse */ .module {
-    padding: 0 !important;
-    border-radius: 4px 4px 4px 4px;
-    margin-left: 4px;
-    margin-right: 4px;
-}
-
-.caption {
-    cursor: pointer;
-    transition: .2s ease color;
-    border-radius: 4px 4px 0 0;
-    padding: 10px 20px;
-    background-color: rgb(231, 228, 228);
-    border-color: rgb(0, 104, 202);
-}
-
-.caption h2 {
-    font-size: 18px;
-    line-height: 2;
-    margin-bottom: 0;
-}
-
-.caption:hover {
-    color: rgb(0, 183, 255);
-}
-
-.body {
-    padding: 16px 12px;
-    line-height: 1.4;
-    font-family: 'Noto Sans SC', sans-serif;
-    color: rgb(167, 166, 166);
-    background-color: whitesmoke;
-    border-radius: 0 0 4px 4px;
-    box-shadow: 0 .75rem 1rem rgba(0, 0, 0, .2);
-    display: none;
-}
-
-.collpse {
-    color: rgb(0, 111, 143);
-}
-
-.icon-roll {
-    font-weight: 900;
-    font-size: 28px;
-    line-height: 1.1;
-}
-
-.rotate {
-    transform: rotate(135deg);
-    transition: .5s cubic-bezier(.17, .67, .21, 1.69);
-    ;
-}
-
-.rev-rotate {
-    transform: rotate(0deg);
-    transition: .7s cubic-bezier(.17, .67, .21, 1.69);
-    ;
-}
-
-
-/*FEATURES CONTACT*/
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    outline: none;
-    font-family: 'Noto Sans SC', sans-serif;
-}
-
-.container-contact {
-    top: 50%;
-    width: 100%;
-    padding: 20px 20px;
-    background: url('https://wallpaperaccess.com/full/186244.jpg') no-repeat top center;
-    background-size: cover;
-    height: 87vh;
-}
-
-
-/*PARTNER SICK*/
-
-.customer-logos {
-    background-color: rgb(255, 255, 255);
-    padding-top: 120px;
-    padding-bottom: 30px;
-}
-
-
-/* Slider */
-
-.slick-slide {
-    margin: 0px 20px;
-}
-
-.slick-slide img {
-    width: 100%;
-}
-
-.slick-slider {
-    position: relative;
-    display: block;
-    box-sizing: border-box;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    -webkit-touch-callout: none;
-    -khtml-user-select: none;
-    -ms-touch-action: pan-y;
-    touch-action: pan-y;
-    -webkit-tap-highlight-color: transparent;
-}
-
-.slick-list {
-    position: relative;
-    display: block;
-    overflow: hidden;
-    margin: 0;
-    padding: 0;
-}
-
-.slick-list:focus {
-    outline: none;
-}
-
-.slick-list.dragging {
-    cursor: pointer;
-    cursor: hand;
-}
-
-.slick-slider .slick-track,
-.slick-slider .slick-list {
-    -webkit-transform: translate3d(0, 0, 0);
-    -moz-transform: translate3d(0, 0, 0);
-    -ms-transform: translate3d(0, 0, 0);
-    -o-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-}
-
-.slick-track {
-    position: relative;
-    top: 0;
-    left: 0;
-    display: block;
-}
-
-.slick-track:before,
-.slick-track:after {
-    display: table;
-    content: '';
-}
-
-.slick-track:after {
-    clear: both;
-}
-
-.slick-loading .slick-track {
-    visibility: hidden;
-}
-
-.slick-slide {
-    display: none;
-    float: left;
-    height: 100%;
-    min-height: 1px;
-}
-
-[dir='rtl'] .slick-slide {
-    float: right;
-}
-
-.slick-slide img {
-    display: block;
-}
-
-.slick-slide.slick-loading img {
-    display: none;
-}
-
-.slick-slide.dragging img {
-    pointer-events: none;
-}
-
-.slick-initialized .slick-slide {
-    display: block;
-}
-
-.slick-loading .slick-slide {
-    visibility: hidden;
-}
-
-.slick-vertical .slick-slide {
-    display: block;
-    height: auto;
-    border: 1px solid transparent;
-}
-
-.slick-arrow.slick-hidden {
-    display: none;
-}
-
-.contact-fome {
-    max-width: 550px;
-    margin: 0 auto;
-    background: rgba(0, 0, 0, 0.8);
-    padding: 30px;
-    border-radius: 5px;
-    display: flex;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
-}
-
-.input-class {
-    display: flex;
-    flex-direction: column;
-    margin-right: 4%;
-}
-
-.input-class,
-.msg {
-    width: 48%;
-}
-
-.input-class .input,
-.msg textarea {
-    margin: 10px 0;
-    background: transparent;
-    border: 0;
-    border-bottom: 2px solid #41B5E6;
-    padding: 10px;
-    color: aqua;
-    width: 100%;
-}
-
-.msg textarea {
-    height: 190px;
-}
-
-::-webkit-input-placeholder {
-    color: aquamarine;
-}
-
-::-moz-input-placeholder {
-    color: aquamarine;
-}
-
-.btn {
-    background: #39b7dd;
-    text-align: center;
-    padding: 15px;
-    border-radius: 5px;
-    color: #fff;
-    cursor: pointer;
-    text-transform: uppercase;
-    display: block;
-    width: 100%;
-    box-shadow: 3px 3px 3px #888888;
-}
-
-msg,
-button:hover {
-    background-color: rgb(240, 240, 240);
-    color: black;
-}
-
-@media screen and (max-width: 600px) {
+    
+    .collpse {
+        color: rgb(0, 111, 143);
+    }
+    
+    .icon-roll {
+        font-weight: 900;
+        font-size: 28px;
+        line-height: 1.1;
+    }
+    
+    .rotate {
+        transform: rotate(135deg);
+        transition: .5s cubic-bezier(.17, .67, .21, 1.69);
+        ;
+    }
+    
+    .rev-rotate {
+        transform: rotate(0deg);
+        transition: .7s cubic-bezier(.17, .67, .21, 1.69);
+        ;
+    }
+    /*FEATURES CONTACT*/
+    
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        outline: none;
+        font-family: 'Noto Sans SC', sans-serif;
+    }
+    
+    .container-contact {
+        top: 50%;
+        width: 100%;
+        padding: 20px 20px;
+        background: url('https://wallpaperaccess.com/full/186244.jpg') no-repeat top center;
+        background-size: cover;
+        height: 87vh;
+    }
+    /*PARTNER SICK*/
+    
+    .customer-logos {
+        background-color: rgb(255, 255, 255);
+        padding-top: 120px;
+        padding-bottom: 30px;
+    }
+    /* Slider */
+    
+    .slick-slide {
+        margin: 0px 20px;
+    }
+    
+    .slick-slide img {
+        width: 100%;
+    }
+    
+    .slick-slider {
+        position: relative;
+        display: block;
+        box-sizing: border-box;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        -webkit-touch-callout: none;
+        -khtml-user-select: none;
+        -ms-touch-action: pan-y;
+        touch-action: pan-y;
+        -webkit-tap-highlight-color: transparent;
+    }
+    
+    .slick-list {
+        position: relative;
+        display: block;
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .slick-list:focus {
+        outline: none;
+    }
+    
+    .slick-list.dragging {
+        cursor: pointer;
+        cursor: hand;
+    }
+    
+    .slick-slider .slick-track,
+    .slick-slider .slick-list {
+        -webkit-transform: translate3d(0, 0, 0);
+        -moz-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+        -o-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+    
+    .slick-track {
+        position: relative;
+        top: 0;
+        left: 0;
+        display: block;
+    }
+    
+    .slick-track:before,
+    .slick-track:after {
+        display: table;
+        content: '';
+    }
+    
+    .slick-track:after {
+        clear: both;
+    }
+    
+    .slick-loading .slick-track {
+        visibility: hidden;
+    }
+    
+    .slick-slide {
+        display: none;
+        float: left;
+        height: 100%;
+        min-height: 1px;
+    }
+    
+    [dir='rtl'] .slick-slide {
+        float: right;
+    }
+    
+    .slick-slide img {
+        display: block;
+    }
+    
+    .slick-slide.slick-loading img {
+        display: none;
+    }
+    
+    .slick-slide.dragging img {
+        pointer-events: none;
+    }
+    
+    .slick-initialized .slick-slide {
+        display: block;
+    }
+    
+    .slick-loading .slick-slide {
+        visibility: hidden;
+    }
+    
+    .slick-vertical .slick-slide {
+        display: block;
+        height: auto;
+        border: 1px solid transparent;
+    }
+    
+    .slick-arrow.slick-hidden {
+        display: none;
+    }
+    
     .contact-fome {
+        max-width: 550px;
+        margin: 0 auto;
+        background: rgba(0, 0, 0, 0.8);
+        padding: 30px;
+        border-radius: 5px;
+        display: flex;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+    }
+    
+    .input-class {
+        display: flex;
         flex-direction: column;
+        margin-right: 4%;
     }
-    .msg text-area {
-        height: 80px;
-    }
+    
     .input-class,
     .msg {
+        width: 48%;
+    }
+    
+    .input-class .input,
+    .msg textarea {
+        margin: 10px 0;
+        background: transparent;
+        border: 0;
+        border-bottom: 2px solid #41B5E6;
+        padding: 10px;
+        color: aqua;
         width: 100%;
     }
-}
-
-.centrado {
-    text-align: center;
-    padding: 1px;
-    color: rgb(0, 111, 143);
-    font-family: 'Noto Sans SC', sans-serif;
-    padding-bottom: 40px;
-}
-
-.centrado-contact {
-    text-align: center;
-    padding: 1px;
-    color: aqua;
-    font-family: 'Noto Sans SC', sans-serif;
-    padding-bottom: 40px;
-}
-
-.efect {
-    animation-name: parpadeo;
-    animation-duration: 1s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    -webkit-animation-name: parpadeo;
-    -webkit-animation-duration: 1s;
-    -webkit-animation-timing-function: linear;
-    -webkit-animation-iteration-count: infinite;
-}
-
-@-moz-keyframes parpadeo {
-    0% {
-        opacity: 1.0;
+    
+    .msg textarea {
+        height: 190px;
     }
-    50% {
-        opacity: 0.0;
+    
+     ::-webkit-input-placeholder {
+        color: aquamarine;
     }
-    100% {
-        opacity: 1.0;
+    
+     ::-moz-input-placeholder {
+        color: aquamarine;
     }
-}
-
-@-webkit-keyframes parpadeo {
-    0% {
-        opacity: 1.0;
-    }
-    50% {
-        opacity: 0.0;
-    }
-    100% {
-        opacity: 1.0;
-    }
-}
-
-@keyframes parpadeo {
-    0% {
-        opacity: 1.0;
-    }
-    50% {
-        opacity: 0.0;
-    }
-    100% {
-        opacity: 1.0;
-    }
-}
-
-
-/*FOOTER FEATURES*/
-
-.footer-distributed {
-    background: rgb(0, 111, 143);
-    background: linear-gradient(90deg, rgba(0, 111, 143, 1) 17%, rgba(0, 58, 88, 1) 100%);
-    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
-    box-sizing: border-box;
-    width: 100%;
-    text-align: left;
-    font-family: 'Noto Sans SC', sans-serif;
-    padding: 55px 50px;
-}
-
-.footer-distributed .footer-left {
-    display: inline-block;
-    vertical-align: top;
-}
-
-
-/* Footer left */
-
-.footer-distributed .footer-left {
-    width: 40%;
-}
-
-
-/* The company logo */
-
-.footer-distributed h3 {
-    color: #ffffff;
-    font: normal 36px 'Open Sans', cursive;
-    margin: 0;
-}
-
-.footer-distributed h3 span {
-    color: rgb(0, 126, 230);
-}
-
-
-/* Footer links */
-
-.footer-distributed .footer-links {
-    color: #ffffff;
-    margin: 20px 0 12px;
-    padding: 0;
-}
-
-.footer-distributed .footer-links a {
-    display: inline-block;
-    line-height: 1.8;
-    font-weight: 400;
-    text-decoration: none;
-    color: inherit;
-}
-
-.footer-distributed .footer-company-name {
-    color: #222;
-    font-size: 14px;
-    font-weight: normal;
-    margin: 0;
-}
-
-.footer-distributed .footer-links a:before {
-    content: "|";
-    font-weight: 300;
-    font-size: 20px;
-    left: 0;
-    color: #fff;
-    display: inline-block;
-    padding-right: 5px;
-}
-
-.footer-distributed .footer-links .link-1:before {
-    content: none;
-}
-
-.footer-distributed .footer-company-about {
-    line-height: 20px;
-    color: #92999f;
-    font-size: 13px;
-    font-weight: normal;
-    margin: 0;
-}
-
-.footer-distributed .footer-company-about span {
-    display: block;
-    color: #ffffff;
-    font-size: 14px;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
-
-.footer-distributed .footer-icons {
-    margin-top: 25px;
-}
-
-.footer-distributed .footer-icons a {
-    display: inline-block;
-    width: 35px;
-    height: 35px;
-    cursor: pointer;
-    background-color: #33383b;
-    border-radius: 2px;
-    font-size: 20px;
-    color: #ffffff;
-    text-align: center;
-    line-height: 35px;
-    margin-right: 3px;
-    margin-bottom: 5px;
-}
-
-
-/* If you don't want the footer to be responsive, remove these media queries */
-
-@media (max-width: 880px) {
-    .footer-distributed {
-        font: bold 14px sans-serif;
-    }
-    .footer-distributed .footer-left {
+    
+    .btn {
+        background: #39b7dd;
+        text-align: center;
+        padding: 15px;
+        border-radius: 5px;
+        color: #fff;
+        cursor: pointer;
+        text-transform: uppercase;
         display: block;
         width: 100%;
-        margin-bottom: 40px;
-        text-align: center;
+        box-shadow: 3px 3px 3px #888888;
     }
-}
+    
+    msg,
+    button:hover {
+        background-color: rgb(240, 240, 240);
+        color: black;
+    }
+    
+    @media screen and (max-width: 600px) {
+        .contact-fome {
+            flex-direction: column;
+        }
+        .msg text-area {
+            height: 80px;
+        }
+        .input-class,
+        .msg {
+            width: 100%;
+        }
+    }
+    
+    .centrado {
+        text-align: center;
+        padding: 1px;
+        color: rgb(0, 111, 143);
+        font-family: 'Noto Sans SC', sans-serif;
+        padding-bottom: 40px;
+    }
+    
+    .centrado-contact {
+        text-align: center;
+        padding: 1px;
+        color: aqua;
+        font-family: 'Noto Sans SC', sans-serif;
+        padding-bottom: 40px;
+    }
+    
+    .efect {
+        animation-name: parpadeo;
+        animation-duration: 1s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        -webkit-animation-name: parpadeo;
+        -webkit-animation-duration: 1s;
+        -webkit-animation-timing-function: linear;
+        -webkit-animation-iteration-count: infinite;
+    }
+    
+    @-moz-keyframes parpadeo {
+        0% {
+            opacity: 1.0;
+        }
+        50% {
+            opacity: 0.0;
+        }
+        100% {
+            opacity: 1.0;
+        }
+    }
+    
+    @-webkit-keyframes parpadeo {
+        0% {
+            opacity: 1.0;
+        }
+        50% {
+            opacity: 0.0;
+        }
+        100% {
+            opacity: 1.0;
+        }
+    }
+    
+    @keyframes parpadeo {
+        0% {
+            opacity: 1.0;
+        }
+        50% {
+            opacity: 0.0;
+        }
+        100% {
+            opacity: 1.0;
+        }
+    }
+    /*FOOTER FEATURES*/
+    
+    .footer-distributed {
+        background: rgb(0, 111, 143);
+        background: linear-gradient(90deg, rgba(0, 111, 143, 1) 17%, rgba(0, 58, 88, 1) 100%);
+        box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+        box-sizing: border-box;
+        width: 100%;
+        text-align: left;
+        font-family: 'Noto Sans SC', sans-serif;
+        padding: 55px 50px;
+    }
+    
+    .footer-distributed .footer-left {
+        display: inline-block;
+        vertical-align: top;
+    }
+    /* Footer left */
+    
+    .footer-distributed .footer-left {
+        width: 40%;
+    }
+    /* The company logo */
+    
+    .footer-distributed h3 {
+        color: #ffffff;
+        font: normal 36px 'Open Sans', cursive;
+        margin: 0;
+    }
+    
+    .footer-distributed h3 span {
+        color: rgb(0, 126, 230);
+    }
+    /* Footer links */
+    
+    .footer-distributed .footer-links {
+        color: #ffffff;
+        margin: 20px 0 12px;
+        padding: 0;
+    }
+    
+    .footer-distributed .footer-links a {
+        display: inline-block;
+        line-height: 1.8;
+        font-weight: 400;
+        text-decoration: none;
+        color: inherit;
+    }
+    
+    .footer-distributed .footer-company-name {
+        color: #222;
+        font-size: 14px;
+        font-weight: normal;
+        margin: 0;
+    }
+    
+    .footer-distributed .footer-links a:before {
+        content: "|";
+        font-weight: 300;
+        font-size: 20px;
+        left: 0;
+        color: #fff;
+        display: inline-block;
+        padding-right: 5px;
+    }
+    
+    .footer-distributed .footer-links .link-1:before {
+        content: none;
+    }
+    
+    .footer-distributed .footer-company-about {
+        line-height: 20px;
+        color: #92999f;
+        font-size: 13px;
+        font-weight: normal;
+        margin: 0;
+    }
+    
+    .footer-distributed .footer-company-about span {
+        display: block;
+        color: #ffffff;
+        font-size: 14px;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+    
+    .footer-distributed .footer-icons {
+        margin-top: 25px;
+    }
+    
+    .footer-distributed .footer-icons a {
+        display: inline-block;
+        width: 35px;
+        height: 35px;
+        cursor: pointer;
+        background-color: #33383b;
+        border-radius: 2px;
+        font-size: 20px;
+        color: #ffffff;
+        text-align: center;
+        line-height: 35px;
+        margin-right: 3px;
+        margin-bottom: 5px;
+    }
+    /* If you don't want the footer to be responsive, remove these media queries */
+    
+    @media (max-width: 880px) {
+        .footer-distributed {
+            font: bold 14px sans-serif;
+        }
+        .footer-distributed .footer-left {
+            display: block;
+            width: 100%;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+    }
