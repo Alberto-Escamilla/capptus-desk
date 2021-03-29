@@ -73,7 +73,7 @@
     }
     
     .navbar-nav {
-        float: left;
+        display: none;
         margin: 0;
         left: 50%;
         transform: translatex(-50%);
